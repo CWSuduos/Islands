@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,14 +14,21 @@ public class LvlWinManager : MonoBehaviour
     public Sprite greyStarSprite;
     public int pointsForLevel;
     public Text pointsText;
+    public Text pointsTextLose;
     public Text pointsTextSecond;
     public GameObject winPanel;
+    public GameObject LosePanel;
     private LevelCharacteristic levelCharacteristic;
     private TimerManager timerManager;
     [SerializeField] private Text timerTextSecond;
+    [SerializeField] private Text timerTextLose;
     public GameObject gamePanel;
     private int currentLevelId;
     public int levelID;
+   
+
+        
+    
     private void Start()
     {
         
@@ -34,6 +42,24 @@ public class LvlWinManager : MonoBehaviour
         currentLevelId = levelId;
         Debug.Log("В YourOtherClass получен ID уровня: " + currentLevelId);
         
+    }
+    public void SetLosePanel()
+    {
+        LosePanel.SetActive(true);
+        gamePanel.SetActive(false);
+        Debug.Log("Уровень проигран!");
+        Timer timer = new Timer();
+        timer.StopTimer();
+        SetLevelCompletedById(levelID);
+        gamePanel.SetActive(false);
+        winPanel.SetActive(true);
+         // Расчет времени
+
+        ;
+           
+       
+        
+        MAxScoreManager.Instance.UpdateTimeSurvived(0);
     }
     private void UpdateStars(int stars)
     {
@@ -69,32 +95,32 @@ public class LvlWinManager : MonoBehaviour
         }
         Debug.LogWarning("LevelCharacteristic с ID " + levelId + " не найден!");
     }
+
+
     public void WinLevel()
     {
         Debug.Log("Уровень пройден!");
-        pointsText.text = "" + pointsForLevel;
-        
-        float timeSpent = CalculateTimeSpent();
-        
+
+        // Показываем общее количество очков
+        pointsText.text = "" + pointsForLevel.ToString();
+
         SetLevelCompletedById(levelID);
         gamePanel.SetActive(false);
         winPanel.SetActive(true);
+
         int stars = CalculateStars();
-        UpdateStars(stars);
-        pointsTextSecond.text = pointsText.text;
-        timerTextSecond.text = FormatTime(timeSpent);
-        UpdateStars(currentStars);
-        MAxScoreManager.Instance.AddPoints(levelID, pointsForLevel,0);
+
+        
+        float timeSpent = timerManager.GetElapsedTime();
+
+       
+        MAxScoreManager.Instance.AddPoints(levelID, pointsForLevel, timeSpent, stars);
     }
-    private float CalculateTimeSpent()
-    {
-        float totalTime = timerManager.minutes * 60 + timerManager.seconds;
-        float timeRemaining = timerManager.timeRemaining;
-        return totalTime - timeRemaining;
-    }
+    public StarCollector StarCollector;
     public void AddStar()
     {
         currentStars++;
+        StarCollector.AddStar();
         Debug.Log("Звезд собрано: " + currentStars); // Выводим текущее количество звезд
 
         // Здесь можно добавить обновление UI, если нужно отображать количество звезд в реальном времени
@@ -104,6 +130,11 @@ public class LvlWinManager : MonoBehaviour
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time % 60);
         return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    public string FormatTimeToScore(float time)
+    {
+        int Score = Mathf.FloorToInt(time / 1);
+        return string.Format("{0}", Score);
     }
     private int CalculateStars()
     {

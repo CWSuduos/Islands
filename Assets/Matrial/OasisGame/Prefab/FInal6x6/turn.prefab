@@ -50,6 +50,7 @@ MonoBehaviour:
   - {fileID: 4671594971877139483, guid: cad0d320a8a017f4e8eb734787dff6b3, type: 3}
   - {fileID: 5035465680520902968, guid: fd5730c898456004297571e0ddea9b41, type: 3}
   - {fileID: 7249478469694488126, guid: f7166ee525decb845831dfe11fc6b194, type: 3}
+  initialPrefabIndex: 0
 --- !u!61 &7078211067863473848
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -82,7 +83,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.015967607, y: 0.11823094}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

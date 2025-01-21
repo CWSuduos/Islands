@@ -13,6 +13,7 @@ public class LvlCreator : MonoBehaviour
         {
             currentLevelID = levelID;
             GameObject panelInstance = Instantiate(panelPrefab, parentForPanel);
+           
             AssignLevelIDText(panelInstance, levelID);
         }
         else

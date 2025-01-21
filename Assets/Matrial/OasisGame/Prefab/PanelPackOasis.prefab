@@ -253,7 +253,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f3001a76de219e4459b46c2f88802c0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 260dcbdcb155f5a49a0433e0a3566722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -341,7 +341,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f3001a76de219e4459b46c2f88802c0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 260dcbdcb155f5a49a0433e0a3566722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -429,7 +429,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f3001a76de219e4459b46c2f88802c0b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 260dcbdcb155f5a49a0433e0a3566722, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1082,7 +1082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1728547289270273560, guid: b73ce890e1c2b524481be2294ed316a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2459577486336509950, guid: b73ce890e1c2b524481be2294ed316a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

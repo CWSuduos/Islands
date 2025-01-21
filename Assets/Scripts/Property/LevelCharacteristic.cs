@@ -4,40 +4,39 @@ using UnityEngine.UI;
 public class LevelCharacteristic : MonoBehaviour
 {
     [Header("Уникальный идентификатор уровня")]
-    [SerializeField]
-    private int levelID;
+    [SerializeField] private int levelID;
 
     [Header("Статус прохождения уровня")]
-    [SerializeField]
-    private bool isCompleted;
+    [SerializeField] private bool isCompleted;
 
     [Header("Имя дочернего объекта с Image")]
-    [SerializeField]
-    private string imageObjectName = "LevelImage";
+    [SerializeField] private string imageObjectName = "LevelImage";
 
     [Header("Имя дочернего объекта с Text")]
-    [SerializeField]
-    private string textObjectName = "LevelText";
+    [SerializeField] private string textObjectName = "LevelText";
 
     [Header("Спрайт для завершенного уровня")]
-    [SerializeField]
-    private Sprite completedSprite;
+    [SerializeField] private Sprite completedSprite;
 
     [Header("Спрайт для незавершенного уровня")]
-    [SerializeField]
-    private Sprite incompleteSprite;
+    [SerializeField] private Sprite incompleteSprite;
 
     [Header("Цвет текста для завершенного уровня")]
-    [SerializeField]
-    private Color completedTextColor = Color.green;
+    [SerializeField] private Color completedTextColor = Color.green;
 
     [Header("Цвет текста для незавершенного уровня")]
-    [SerializeField]
-    private Color incompleteTextColor = Color.white;
+    [SerializeField] private Color incompleteTextColor = Color.white;
+
+    [Header("Звезды для завершенного уровня")]
+    [SerializeField] private Sprite completedStarSprite;
+
+    [Header("Звезды для незавершенного уровня")]
+    [SerializeField] private Sprite incompleteStarSprite;
+
 
     private Image levelImage;
     private Text levelText;
-
+    private Image[] starImages;
 
     public int LevelID
     {
@@ -57,7 +56,6 @@ public class LevelCharacteristic : MonoBehaviour
 
     private void Start()
     {
-        // Находим дочерние объекты по имени
         Transform imageTransform = transform.Find(imageObjectName);
         Transform textTransform = transform.Find(textObjectName);
 
@@ -73,10 +71,8 @@ public class LevelCharacteristic : MonoBehaviour
             return;
         }
 
-
         levelImage = imageTransform.GetComponent<Image>();
         levelText = textTransform.GetComponent<Text>();
-
 
         if (levelImage == null)
         {
@@ -90,20 +86,24 @@ public class LevelCharacteristic : MonoBehaviour
             return;
         }
 
+        starImages = GetComponentsInChildren<Image>(true);
+
         UpdateVisuals();
     }
 
     private void UpdateVisuals()
     {
-        if (isCompleted)
+        levelImage.sprite = isCompleted ? completedSprite : incompleteSprite;
+        levelText.color = isCompleted ? completedTextColor : incompleteTextColor;
+
+        Sprite starSprite = isCompleted ? completedStarSprite : incompleteStarSprite;
+
+        foreach (Image starImage in starImages)
         {
-            levelImage.sprite = completedSprite;
-            levelText.color = completedTextColor;
-        }
-        else
-        {
-            levelImage.sprite = incompleteSprite;
-            levelText.color = incompleteTextColor;
+            if (starImage != levelImage && starImage.gameObject.name.Contains("Star"))
+            {
+                starImage.sprite = starSprite;
+            }
         }
     }
 }

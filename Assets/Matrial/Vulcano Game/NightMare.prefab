@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1767980011033275167}
   - component: {fileID: 2082951129040511668}
   - component: {fileID: 4876925748808605848}
+  - component: {fileID: -3298338023211517675}
   m_Layer: 5
   m_Name: NightMare
   m_TagString: Untagged
@@ -30,7 +31,7 @@ RectTransform:
   m_GameObject: {fileID: 2519266760333413693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.99975455}
-  m_LocalScale: {x: 100, y: 100, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -123,6 +124,10 @@ MonoBehaviour:
   speed: 0.5
   bottomBoundary: -2
   gizmoColor: {r: 1, g: 0, b: 0, a: 1}
+  losePanel: {fileID: 0}
+  spawner: {fileID: 0}
+  player: {fileID: 0}
+  destroyDelay: 0
 --- !u!61 &2082951129040511668
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,3 +191,15 @@ MonoBehaviour:
   circleRadius: 5
   startColor: {r: 0.3773585, g: 0.012459958, b: 0.012459958, a: 1}
   endColor: {r: 1, g: 0.57088286, b: 0.015686274, a: 1}
+--- !u!114 &-3298338023211517675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2519266760333413693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa245cc2e5041a74c92750fde7237d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

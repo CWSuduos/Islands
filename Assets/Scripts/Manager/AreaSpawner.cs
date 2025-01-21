@@ -46,21 +46,31 @@ public class AreaSpawner : MonoBehaviour
     }
 
     void SpawnObject()
-
     {
+        if (prefabsToSpawn.Length == 0)
+        {
+            Debug.LogWarning("Нет префабов для спавна!");
+            return;
+        }
+
         int randomIndex = Random.Range(0, prefabsToSpawn.Length);
         GameObject prefab = prefabsToSpawn[randomIndex];
 
-        // Генерируем случайную позицию внутри области спавна
+        if (prefab == null)
+        {
+            Debug.LogWarning("Префаб под индексом " + randomIndex + " не задан!");
+            return;
+        }
+
         Vector3 spawnPosition = new Vector3(
             Random.Range(spawnArea.xMin, spawnArea.xMax),
             Random.Range(spawnArea.yMin, spawnArea.yMax),
             0f
         );
-        spawnPosition += transform.position; // Добавляем позицию спавнера
+        spawnPosition += transform.position;
 
-
-        Instantiate(prefab, spawnPosition, Quaternion.identity, transform);
+        GameObject clonedObject = Instantiate(prefab, spawnPosition, Quaternion.identity, transform);
+        clonedObject.transform.localScale = prefab.transform.localScale;
     }
     public void StopSpawning()
     {

@@ -266,6 +266,8 @@ MonoBehaviour:
   incompleteSprite: {fileID: 21300000, guid: 6c0866757ac88db419c797ef9f936839, type: 3}
   completedTextColor: {r: 0.14901961, g: 0.14509805, b: 0.12941177, a: 1}
   incompleteTextColor: {r: 1, g: 0.8588236, b: 0.22352943, a: 1}
+  completedStarSprite: {fileID: 21300000, guid: bb054302fb44247439e89fa62af1c7ff, type: 3}
+  incompleteStarSprite: {fileID: 21300000, guid: 39c18fc016b20a5439ca127ae3b1cc99, type: 3}
 --- !u!114 &-3253781584512912265
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -93,21 +93,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPrefabs:
   - {fileID: 6896222235900342861, guid: 90800215893885144a2d935a0c4c1c82, type: 3}
-  - {fileID: 3328717586123957741, guid: 995f9e3c751a48e41afba34c4c5a2b7b, type: 3}
-  - {fileID: 3328717586123957741, guid: 221579464571dce49b5ec60d721a6229, type: 3}
-  - {fileID: 3328717586123957741, guid: 666f9b325bde2d24482e6e5fbac12758, type: 3}
-  - {fileID: 3328717586123957741, guid: 30cf6f99a5c67624db9d251eb050e119, type: 3}
-  - {fileID: 3328717586123957741, guid: 4129a0b213950bd48aa140a2a7d9cc3c, type: 3}
-  - {fileID: 3328717586123957741, guid: e26a09a2cd8f6a04992e23810dd5b60f, type: 3}
-  - {fileID: 3328717586123957741, guid: 2f635674dd8dee84c9beaf575a828f50, type: 3}
-  - {fileID: 3328717586123957741, guid: 3854c3f7bd78c334da26e297adbe0e61, type: 3}
-  - {fileID: 3328717586123957741, guid: d7789a4579f94bf4eb870350b0ccde4b, type: 3}
-  - {fileID: 3328717586123957741, guid: cd0c7b9018cd25546ac1f2eb67f4a114, type: 3}
-  - {fileID: 3328717586123957741, guid: 93f7506ae4fbd054497cbecd477621eb, type: 3}
-  - {fileID: 3328717586123957741, guid: 09b77fa78e42b3a4f9be534c89e65811, type: 3}
-  - {fileID: 3328717586123957741, guid: edc389736f3304b439af2b48f509f1ef, type: 3}
-  - {fileID: 3328717586123957741, guid: 83451f9b2e6b3e34f811577d817fe196, type: 3}
-  - {fileID: 3328717586123957741, guid: 38e43ea8c6ff7dc429ed6d740928ab8a, type: 3}
+  - {fileID: 3328717586123957741, guid: 5108e13e4fdb78146b6a24a50ce1465b, type: 3}
+  - {fileID: 3328717586123957741, guid: 287de9bfa21fe454b8b57023efae6190, type: 3}
+  - {fileID: 3328717586123957741, guid: 411470f383ca7794486ec5bd39caaf08, type: 3}
+  - {fileID: 3328717586123957741, guid: 40b9ad920b7fba44d8ef4c8d4502d079, type: 3}
+  - {fileID: 3328717586123957741, guid: af97e18278aa8b1409c6933ec7d21294, type: 3}
+  - {fileID: 3328717586123957741, guid: 353c40e881b1302418910db6b6fd491f, type: 3}
+  - {fileID: 3328717586123957741, guid: 66729de440481f94c962516157309f12, type: 3}
+  - {fileID: 3328717586123957741, guid: 36c1f6ef98a9bb04fa6c0a7ec3f143f0, type: 3}
+  - {fileID: 3328717586123957741, guid: ec8c88b087433f642989ff7d100377dc, type: 3}
+  - {fileID: 3328717586123957741, guid: bd2148ce06ded0746a161bdd9d9f5130, type: 3}
+  - {fileID: 3328717586123957741, guid: 2b5f37f6f7a2b6b4da837259955bcf8e, type: 3}
+  - {fileID: 3328717586123957741, guid: 445185f3ef9b5934e9b5624200c82a19, type: 3}
+  - {fileID: 3328717586123957741, guid: 5468c835c9754484798b3a91963ea7e1, type: 3}
+  - {fileID: 3328717586123957741, guid: 8c4720c7d31fe914dbae471d8eb272cf, type: 3}
+  - {fileID: 3328717586123957741, guid: 289fc30bf45b72e4c9ef444bf40a1fe2, type: 3}
   parentTag: GameScene
   panelToHide: {fileID: 686529093727937801}
 --- !u!1 &687367896681441047
@@ -1081,7 +1081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 201, y: -435}
+  m_AnchoredPosition: {x: 196, y: -480}
   m_SizeDelta: {x: 122, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3789870751553443647

@@ -38,6 +38,9 @@ public class LvlManager : MonoBehaviour
             if (levelID >= 0 && levelID < panelPrefabs.Length)
             {
                 GameObject panelInstance = Instantiate(panelPrefabs[levelID], parentForPanel);
+                panelInstance.transform.localPosition = Vector3.zero;
+                panelInstance.transform.localRotation = Quaternion.identity;
+                panelInstance.transform.localScale = Vector3.one;
             }
             else
             {

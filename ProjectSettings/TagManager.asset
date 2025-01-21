@@ -7,6 +7,8 @@ TagManager:
   - GameScene
   - WinObject
   - Lose
+  - Text
+  - Star
   layers:
   - Default
   - TransparentFX

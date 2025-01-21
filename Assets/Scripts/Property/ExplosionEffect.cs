@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 using System.Collections;
+using System;
 
 public class PickupEffect : MonoBehaviour
 {
@@ -17,13 +18,14 @@ public class PickupEffect : MonoBehaviour
     [SerializeField] private int projectileCount = 20;
     [SerializeField] private float projectileForce = 5f;
     [SerializeField] private float projectileLifespan = 1f;
-
+    private LvlWinManager StarCollector;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag(playerTag))
         {
-            StartCoroutine(PlayEffect(collision.transform.position)); // ѕередаем позицию игрока
+            StartCoroutine(PlayEffect(collision.transform.position));
+            StarCollector.AddStar();
             Destroy(gameObject); // ћгновенно уничтожаем объект
         }
     }
@@ -74,5 +76,16 @@ public class PickupEffect : MonoBehaviour
         }
 
         yield return new WaitForSeconds(circleExpandDuration); // ∆дем завершени€ анимации круга (не об€зательно)
+    }
+}
+
+
+public class Star : MonoBehaviour
+{
+    public event Action onDestroyed;
+
+    private void OnDestroy()
+    {
+        onDestroyed?.Invoke();
     }
 }

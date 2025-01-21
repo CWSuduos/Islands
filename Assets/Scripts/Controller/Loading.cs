@@ -2,6 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Loading : MonoBehaviour
 {
@@ -21,21 +22,58 @@ public class Loading : MonoBehaviour
     private List<GameObject> spawnedCopies = new List<GameObject>();
     private float currentProgress = 0f;
     public GameObject PanelToShow;
-    public GameObject PanelToHide;
-    private void Start()
+    public GameObject PanelToHide;// Время задержки в секундах
+
+    // Вариант 1: Запуск при старте сцены
+    void Start()
     {
         StartFlight();
-       
-       
+        StartCoroutine(SwitchPanelsAfterDelay(duration));
     }
-    private void Update()
+
+    // Вариант 2: Вызов метода из другого скрипта (например, по кнопке)
+    public void StartPanelSwitch()
     {
-        // Проверяем завершение полета и обновляем панели только один раз
-        if ( progressText.text == "100%")
+        StartFlight();
+        StartCoroutine(SwitchPanelsAfterDelay(duration));
+    }
+
+
+    IEnumerator SwitchPanelsAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (PanelToHide != null)
         {
             PanelToHide.SetActive(false);
+        }
+
+        if (PanelToShow != null)
+        {
             PanelToShow.SetActive(true);
-            progressText.text = "0";
+        }
+    }
+
+
+    //  Дополнительные методы для большей гибкости (опционально)
+
+    //  Переключение панелей с заданной задержкой
+    public void SwitchPanelsWithDelay(float delay)
+    {
+        StartCoroutine(SwitchPanelsAfterDelay(delay));
+    }
+
+    // Мгновенное переключение панелей
+    public void SwitchPanelsImmediately()
+    {
+        if (PanelToHide != null)
+        {
+            PanelToHide.SetActive(false);
+        }
+
+        if (PanelToShow != null)
+        {
+            PanelToShow.SetActive(true);
         }
     }
 

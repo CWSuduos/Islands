@@ -9,16 +9,11 @@ public class MAxScoreManager : MonoBehaviour
     public static MAxScoreManager Instance { get; private set; }
 
     public Text maxPointsText;
- 
-    public Text totalMaxTimes; // Предполагаю, это текст для отображения максимального времени
+    public Text totalMaxTimes;
 
-    private int totalMaxPoints;
+    private int maxPoints; // Максимальные очки среди всех уровней
     private float maxTimeSurvived;
-    private void Update()
-    {
-        
 
-    }
     private void Awake()
     {
         if (Instance == null)
@@ -32,25 +27,33 @@ public class MAxScoreManager : MonoBehaviour
             return;
         }
 
-        totalMaxPoints = PlayerPrefs.GetInt("TotalMaxPoints", 0);
-        maxTimeSurvived = PlayerPrefs.GetFloat("MaxTimeSurvived", 0f);
-
-        UpdateTotalMaxPointsUI();
-        UpdateMaxTimeSurvivedUI();
+        // Загрузка сохраненных данных
+        LoadData();
     }
 
-    public void AddPoints(int levelId, int points, int maxPointsForLevel)
+    private void Update()
     {
-        int previousMaxPoints = PlayerPrefs.GetInt("MaxPointsLevel" + levelId, 0);
-        if (points > previousMaxPoints)
-        {
-            PlayerPrefs.SetInt("MaxPointsLevel" + levelId, points);
-        }
-        maxPointsText.text = PlayerPrefs.GetInt("MaxPointsLevel" + levelId, 0).ToString();
+        // (Этот метод Update у вас пустой, но, возможно, он понадобится вам в будущем)
+    }
 
-        totalMaxPoints += points;
-        PlayerPrefs.SetInt("TotalMaxPoints", totalMaxPoints);
-        UpdateTotalMaxPointsUI();
+    public void AddPoints(int levelId, int points, float timeSpent, int stars)
+    {
+        // Сравниваем текущие очки с текущим максимумом
+        if (points > maxPoints)
+        {
+            maxPoints = points;
+            PlayerPrefs.SetInt("MaxPoints", maxPoints);
+            UpdateMaxPointsUI(maxPoints); // Обновляем UI
+        }
+
+        Debug.Log("Набранные очки: " + points);
+
+        // Сохраняем время прохождения и количество звёзд для уровня (если нужно)
+        PlayerPrefs.SetFloat("TimeLevel" + levelId, timeSpent);
+        PlayerPrefs.SetInt("StarsLevel" + levelId, stars);
+
+        // Сохраняем данные
+        PlayerPrefs.Save();
     }
 
     public void UpdateTimeSurvived(float timeSurvived)
@@ -59,20 +62,35 @@ public class MAxScoreManager : MonoBehaviour
         {
             maxTimeSurvived = timeSurvived;
             PlayerPrefs.SetFloat("MaxTimeSurvived", maxTimeSurvived);
-            UpdateMaxTimeSurvivedUI();
+            // Обновить UI с максимальным временем (если нужно)
+            UpdateTotalMaxTimeUI(maxTimeSurvived);
         }
     }
 
-
-    private void UpdateTotalMaxPointsUI()
+    private void UpdateMaxPointsUI(int maxPoints)
     {
-        
+        // Обновление UI с максимальными очками
+        Debug.Log("Максимальные очки: " + maxPoints);
+        maxPointsText.text = "" + maxPoints.ToString();
     }
 
-    private void UpdateMaxTimeSurvivedUI()
+    private void UpdateTotalMaxTimeUI(float maxTime)
     {
-        TimeSpan time = TimeSpan.FromSeconds(maxTimeSurvived);
-        string formattedTime = string.Format("{0:D2}:{1:D2}", time.Minutes, time.Seconds);
-        totalMaxTimes.text = formattedTime; // Обновляем totalMaxTimes
+        // Обновление UI с максимальным временем выживания
+        totalMaxTimes.text = "Max Time: " + maxTime.ToString("F2");
+    }
+
+    private void LoadData()
+    {
+        maxPoints = PlayerPrefs.GetInt("MaxPoints", 0);
+        maxTimeSurvived = PlayerPrefs.GetFloat("MaxTimeSurvived", 0f);
+
+        // Обновляем UI при загрузке данных
+        UpdateMaxPointsUI(maxPoints);
+        UpdateTotalMaxTimeUI(maxTimeSurvived);
+
+        // Вывод в консоль загруженных данных для отладки
+        Debug.Log("Загружено максимальное количество очков: " + maxPoints);
+        Debug.Log("Загружено максимальное время выживания: " + maxTimeSurvived);
     }
 }

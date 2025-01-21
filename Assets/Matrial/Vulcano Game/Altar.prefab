@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1478258197143428534}
   m_Layer: 5
   m_Name: Altar
-  m_TagString: Untagged
+  m_TagString: Star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  bottomBoundary: -5
+  bottomBoundary: -100
   gizmoColor: {r: 1, g: 0, b: 0, a: 1}
   starPrefab: {fileID: 3655133587139637094, guid: 64c35dddc12ea8843a392b6052e5c6d2, type: 3}
   animationDuration: 0.5

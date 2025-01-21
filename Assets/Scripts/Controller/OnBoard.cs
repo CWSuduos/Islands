@@ -47,7 +47,7 @@ public class OnBoard : MonoBehaviour
                 if (panelIndicator != null && panelIndicator.transform.parent != null)
                     panelIndicator.transform.parent.gameObject.SetActive(false);
             GameObject oldPanel = onboardingPanels[oldIndex];
-            Animate(oldPanel, 0.4f, -2000f);
+            Animate(oldPanel, 1f, -2000f);
         }
     }
 

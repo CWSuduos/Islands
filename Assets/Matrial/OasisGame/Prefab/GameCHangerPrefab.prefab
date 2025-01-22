@@ -925,6 +925,7 @@ GameObject:
   - component: {fileID: 3831261759985530356}
   - component: {fileID: 4037144407180880082}
   - component: {fileID: 643778209598789922}
+  - component: {fileID: 6739137748375286602}
   m_Layer: 5
   m_Name: SaundButton
   m_TagString: Untagged
@@ -1033,18 +1034,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8358603824903166314}
-        m_TargetAssemblyTypeName: MuzikController, Assembly-CSharp
-        m_MethodName: OnButtonClick
-        m_Mode: 2
+      - m_Target: {fileID: 6739137748375286602}
+        m_TargetAssemblyTypeName: MuzikButton, Assembly-CSharp
+        m_MethodName: UpdateButtonState
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 643778209598789922}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6739137748375286602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5138107959988685109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59c80dd1ec58034e88475d36d3999fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5684188582825472210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,14 +1514,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7158019436057990613, guid: 9cb0c9800485a854faf6486c2a63550f, type: 3}
   m_PrefabInstance: {fileID: 6614476472468403630}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8358603824903166314 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2897202874708356292, guid: 9cb0c9800485a854faf6486c2a63550f, type: 3}
-  m_PrefabInstance: {fileID: 6614476472468403630}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef7e5d7929c3f1e4082d7e04609d7416, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

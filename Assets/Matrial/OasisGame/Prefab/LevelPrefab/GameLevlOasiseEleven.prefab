@@ -342,6 +342,7 @@ MonoBehaviour:
   timerTextLose: {fileID: 0}
   gamePanel: {fileID: 6749523728598676300}
   levelID: 10
+  StarCollector: {fileID: 0}
 --- !u!114 &4363666619086793962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2035,6 +2036,7 @@ GameObject:
   - component: {fileID: 1949663060853646663}
   - component: {fileID: 2177782117846817064}
   - component: {fileID: 6040877201267399983}
+  - component: {fileID: 1639721365748600683}
   m_Layer: 5
   m_Name: ButtonSound
   m_TagString: Untagged
@@ -2143,18 +2145,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2897202874708356292, guid: 9cb0c9800485a854faf6486c2a63550f, type: 3}
-        m_TargetAssemblyTypeName: MuzikController, Assembly-CSharp
-        m_MethodName: OnButtonClick
-        m_Mode: 2
+      - m_Target: {fileID: 1639721365748600683}
+        m_TargetAssemblyTypeName: MuzikButton, Assembly-CSharp
+        m_MethodName: UpdateButtonState
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 6040877201267399983}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1639721365748600683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2694008022884653000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59c80dd1ec58034e88475d36d3999fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2742908306819408687
 GameObject:
   m_ObjectHideFlags: 0

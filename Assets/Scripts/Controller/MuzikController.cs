@@ -4,58 +4,70 @@ using UnityEngine.UI;
 public class MuzikController : MonoBehaviour
 {
     [SerializeField] private AudioClip muzik;
-    [SerializeField] private Sprite playSprite;
-    [SerializeField] private Sprite pauseSprite;
+    [SerializeField] public Sprite playSprite;
+    [SerializeField] public Sprite pauseSprite;
 
-    private bool isPlaying = false;
+    private static MuzikController instance;
+    public bool isPlaying = false;
+    private AudioSource audioSource;
 
-    private void Start()
+    private void Awake()
     {
-        
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
         if (muzik == null)
         {
             Debug.LogError("Аудиоклип не назначен!");
+            return;
         }
-        PlayMuzik();
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = muzik;
+        audioSource.loop = true;
+        audioSource.Play();
+        isPlaying = true;
     }
 
-    public void PlayMuzik()
+    public static MuzikController Instance
     {
-        if (!isPlaying)
-        {
-            AudioSource.PlayClipAtPoint(muzik, Camera.main.transform.position);
-            isPlaying = true;
-        }
-    }
-
-    public void StopMuzik()
-    {
-        
-        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
-        foreach (AudioSource audioSource in allAudioSources)
-        {
-            audioSource.Stop();
-        }
-        isPlaying = false;
-    }
-
-    public void LoopMuzik()
-    {
-      
-        Debug.LogWarning("Loop не поддерживается при использовании PlayClipAtPoint.");
+        get { return instance; }
     }
 
     public void OnButtonClick(Button button)
     {
         if (isPlaying)
         {
-            StopMuzik();
+            audioSource.Stop();
             button.image.sprite = playSprite;
+            isPlaying = false;
+            UpdateAllButtons();
         }
         else
         {
-            PlayMuzik();
+            audioSource.Play();
             button.image.sprite = pauseSprite;
+            isPlaying = true;
+            UpdateAllButtons();
+        }
+    }
+
+    private void UpdateAllButtons()
+    {
+        Button[] allButtons = FindObjectsOfType<Button>();
+        foreach (Button button in allButtons)
+        {
+            MuzikButton muzikButton = button.GetComponent<MuzikButton>();
+            if (muzikButton != null)
+            {
+                muzikButton.UpdateButtonState();
+            }
         }
     }
 }

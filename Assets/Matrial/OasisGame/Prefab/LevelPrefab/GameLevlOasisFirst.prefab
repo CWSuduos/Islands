@@ -1201,7 +1201,7 @@ RectTransform:
   - {fileID: 7215260834327793635}
   - {fileID: 817038073279568232}
   - {fileID: 3480619852322435597}
-  - {fileID: 8850617071376866316}
+  - {fileID: 7554675075682697516}
   - {fileID: 5941529496838229817}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3205,7 +3205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelToShow: {fileID: 0}
   panelToHide: {fileID: 1696830234794295283}
---- !u!1 &4477249189368744627
+--- !u!1 &4717508653479926669
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3213,10 +3213,11 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8850617071376866316}
-  - component: {fileID: 6589067078685632278}
-  - component: {fileID: 7302942034603196109}
-  - component: {fileID: 2946644933888469097}
+  - component: {fileID: 7554675075682697516}
+  - component: {fileID: 698238312461310531}
+  - component: {fileID: 7068158090113011930}
+  - component: {fileID: 2153052686001258239}
+  - component: {fileID: 7503156816736478977}
   m_Layer: 5
   m_Name: ButtonSound
   m_TagString: Untagged
@@ -3224,13 +3225,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8850617071376866316
+--- !u!224 &7554675075682697516
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4477249189368744627}
+  m_GameObject: {fileID: 4717508653479926669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -3240,24 +3241,24 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 295, y: -748}
+  m_AnchoredPosition: {x: 295, y: -744}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &6589067078685632278
+--- !u!222 &698238312461310531
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4477249189368744627}
+  m_GameObject: {fileID: 4717508653479926669}
   m_CullTransparentMesh: 1
---- !u!114 &7302942034603196109
+--- !u!114 &7068158090113011930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4477249189368744627}
+  m_GameObject: {fileID: 4717508653479926669}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -3281,13 +3282,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &2946644933888469097
+--- !u!114 &2153052686001258239
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4477249189368744627}
+  m_GameObject: {fileID: 4717508653479926669}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -3321,22 +3322,34 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 7302942034603196109}
+  m_TargetGraphic: {fileID: 7068158090113011930}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2897202874708356292, guid: 9cb0c9800485a854faf6486c2a63550f, type: 3}
-        m_TargetAssemblyTypeName: MuzikController, Assembly-CSharp
-        m_MethodName: OnButtonClick
-        m_Mode: 2
+      - m_Target: {fileID: 7503156816736478977}
+        m_TargetAssemblyTypeName: MuzikButton, Assembly-CSharp
+        m_MethodName: UpdateButtonState
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2946644933888469097}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7503156816736478977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717508653479926669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59c80dd1ec58034e88475d36d3999fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4794041554808879807
 GameObject:
   m_ObjectHideFlags: 0
@@ -3491,6 +3504,7 @@ MonoBehaviour:
   timerTextLose: {fileID: 0}
   gamePanel: {fileID: 1775293194484062102}
   levelID: 0
+  StarCollector: {fileID: 0}
 --- !u!114 &8369331020673843027
 MonoBehaviour:
   m_ObjectHideFlags: 0

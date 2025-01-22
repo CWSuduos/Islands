@@ -92,22 +92,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelPrefabs:
-  - {fileID: 6896222235900342861, guid: 90800215893885144a2d935a0c4c1c82, type: 3}
-  - {fileID: 3328717586123957741, guid: 5108e13e4fdb78146b6a24a50ce1465b, type: 3}
-  - {fileID: 3328717586123957741, guid: 287de9bfa21fe454b8b57023efae6190, type: 3}
-  - {fileID: 3328717586123957741, guid: 411470f383ca7794486ec5bd39caaf08, type: 3}
-  - {fileID: 3328717586123957741, guid: 40b9ad920b7fba44d8ef4c8d4502d079, type: 3}
-  - {fileID: 3328717586123957741, guid: af97e18278aa8b1409c6933ec7d21294, type: 3}
-  - {fileID: 3328717586123957741, guid: 353c40e881b1302418910db6b6fd491f, type: 3}
-  - {fileID: 3328717586123957741, guid: 66729de440481f94c962516157309f12, type: 3}
-  - {fileID: 3328717586123957741, guid: 36c1f6ef98a9bb04fa6c0a7ec3f143f0, type: 3}
-  - {fileID: 3328717586123957741, guid: ec8c88b087433f642989ff7d100377dc, type: 3}
-  - {fileID: 3328717586123957741, guid: bd2148ce06ded0746a161bdd9d9f5130, type: 3}
-  - {fileID: 3328717586123957741, guid: 2b5f37f6f7a2b6b4da837259955bcf8e, type: 3}
-  - {fileID: 3328717586123957741, guid: 445185f3ef9b5934e9b5624200c82a19, type: 3}
-  - {fileID: 3328717586123957741, guid: 5468c835c9754484798b3a91963ea7e1, type: 3}
-  - {fileID: 3328717586123957741, guid: 8c4720c7d31fe914dbae471d8eb272cf, type: 3}
-  - {fileID: 3328717586123957741, guid: 289fc30bf45b72e4c9ef444bf40a1fe2, type: 3}
+  - {fileID: 3328717586123957741, guid: 995f9e3c751a48e41afba34c4c5a2b7b, type: 3}
+  - {fileID: 3328717586123957741, guid: 995f9e3c751a48e41afba34c4c5a2b7b, type: 3}
+  - {fileID: 3328717586123957741, guid: 96fe9f29f2288d84e862531c750ae5ce, type: 3}
+  - {fileID: 3328717586123957741, guid: 897418c0aaeaf66469ca04ae55905854, type: 3}
+  - {fileID: 3328717586123957741, guid: fb1147de8890eec4b83c32f24ddb97f3, type: 3}
+  - {fileID: 3328717586123957741, guid: 8720a7d06d45f33439572db10b4428f1, type: 3}
+  - {fileID: 3328717586123957741, guid: d8d9bf01fa062e944b9310987c8a68ab, type: 3}
+  - {fileID: 3328717586123957741, guid: ca711d7fbf533e74a873fc4da5cc432a, type: 3}
+  - {fileID: 3328717586123957741, guid: 859885d752ad0d645b4c0f0560528135, type: 3}
+  - {fileID: 3328717586123957741, guid: 96d91cb7492fc2440a288167db0e7d4c, type: 3}
+  - {fileID: 3328717586123957741, guid: 3293c3036332e26479ee0dfb8f7b0ba0, type: 3}
+  - {fileID: 3328717586123957741, guid: 92b28c160ee2e0042ab49ce16e33fe98, type: 3}
+  - {fileID: 3328717586123957741, guid: b84eeaeef06b1be43b9f7c780690d1c7, type: 3}
+  - {fileID: 3328717586123957741, guid: 1e53a5908c9078645929b7caaebd568f, type: 3}
+  - {fileID: 3328717586123957741, guid: be2dfeb32f1030f48ad6cccef11e4a34, type: 3}
+  - {fileID: 3328717586123957741, guid: 216ee892a49bd6549a3298f2c071acf5, type: 3}
   parentTag: GameScene
   panelToHide: {fileID: 686529093727937801}
 --- !u!1 &687367896681441047
@@ -913,7 +913,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Level 01
---- !u!1 &5138107959988685109
+--- !u!1 &4515933403478877400
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -921,25 +921,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4553785794142957648}
-  - component: {fileID: 3831261759985530356}
-  - component: {fileID: 4037144407180880082}
-  - component: {fileID: 643778209598789922}
+  - component: {fileID: 1904386915718088753}
+  - component: {fileID: 4179548405022004637}
+  - component: {fileID: 2708732432620817288}
+  - component: {fileID: 8802232294365618822}
+  - component: {fileID: 3414903109070118887}
   m_Layer: 5
-  m_Name: SaundButton
+  m_Name: ButtonSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4553785794142957648
+--- !u!224 &1904386915718088753
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5138107959988685109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 4515933403478877400}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -951,21 +952,21 @@ RectTransform:
   m_AnchoredPosition: {x: 295, y: -694}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3831261759985530356
+--- !u!222 &4179548405022004637
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5138107959988685109}
+  m_GameObject: {fileID: 4515933403478877400}
   m_CullTransparentMesh: 1
---- !u!114 &4037144407180880082
+--- !u!114 &2708732432620817288
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5138107959988685109}
+  m_GameObject: {fileID: 4515933403478877400}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -989,13 +990,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &643778209598789922
+--- !u!114 &8802232294365618822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5138107959988685109}
+  m_GameObject: {fileID: 4515933403478877400}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -1029,22 +1030,34 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 4037144407180880082}
+  m_TargetGraphic: {fileID: 2708732432620817288}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8358603824903166314}
-        m_TargetAssemblyTypeName: MuzikController, Assembly-CSharp
-        m_MethodName: OnButtonClick
-        m_Mode: 2
+      - m_Target: {fileID: 3414903109070118887}
+        m_TargetAssemblyTypeName: MuzikButton, Assembly-CSharp
+        m_MethodName: UpdateButtonState
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 643778209598789922}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3414903109070118887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515933403478877400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a59c80dd1ec58034e88475d36d3999fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5684188582825472210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1252,7 @@ RectTransform:
   - {fileID: 5308889043493233440}
   - {fileID: 4292309080418108867}
   - {fileID: 2961478687280043642}
-  - {fileID: 4553785794142957648}
+  - {fileID: 1904386915718088753}
   - {fileID: 6931838086956539119}
   - {fileID: 3925620262889229748}
   m_Father: {fileID: 850480055061229643}
@@ -1501,14 +1514,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7158019436057990613, guid: 9cb0c9800485a854faf6486c2a63550f, type: 3}
   m_PrefabInstance: {fileID: 6614476472468403630}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8358603824903166314 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2897202874708356292, guid: 9cb0c9800485a854faf6486c2a63550f, type: 3}
-  m_PrefabInstance: {fileID: 6614476472468403630}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef7e5d7929c3f1e4082d7e04609d7416, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

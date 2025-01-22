@@ -11,11 +11,12 @@ public class MuzikController : MonoBehaviour
 
     private void Start()
     {
-        // Убедимся, что аудиоклип назначен
+        
         if (muzik == null)
         {
             Debug.LogError("Аудиоклип не назначен!");
         }
+        PlayMuzik();
     }
 
     public void PlayMuzik()
@@ -29,7 +30,7 @@ public class MuzikController : MonoBehaviour
 
     public void StopMuzik()
     {
-        // Останавливаем все аудио, воспроизводимое через PlayClipAtPoint
+        
         AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
         foreach (AudioSource audioSource in allAudioSources)
         {
@@ -40,8 +41,7 @@ public class MuzikController : MonoBehaviour
 
     public void LoopMuzik()
     {
-        // Этот метод не может быть реализован напрямую через PlayClipAtPoint,
-        // так как он не поддерживает цикличное воспроизведение.
+      
         Debug.LogWarning("Loop не поддерживается при использовании PlayClipAtPoint.");
     }
 

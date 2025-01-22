@@ -1038,6 +1038,7 @@ MonoBehaviour:
   timerTextLose: {fileID: 0}
   gamePanel: {fileID: 7510823529081556992}
   levelID: 5
+  StarCollector: {fileID: 0}
 --- !u!114 &2899424583153037203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5048,7 +5049,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014321387, y: -0.25374365}
+  m_Offset: {x: 0.014321387, y: -0.8371054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5059,7 +5060,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9963263, y: 2.7410026}
+  m_Size: {x: 1.9963263, y: 3.907726}
   m_EdgeRadius: 0
 --- !u!50 &1508320136168741095
 Rigidbody2D:
